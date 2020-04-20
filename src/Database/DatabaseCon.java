@@ -1,8 +1,9 @@
-package Database;
+package ProofOfConcept.Database;
 
+import javax.xml.crypto.Data;
 import java.sql.*;
 
-public class DatabaseCon {
+public class DatabaseCon implements DatabaseInterface {
 
     private static Connection c = null;
     private static Statement stmt = null;
@@ -18,6 +19,7 @@ public class DatabaseCon {
 
         try {
             openConn();
+            System.out.println("Database runs.........");
             PreparedStatement preparedStatement = c.prepareStatement("SELECT * FROM \"DATA\".book;");
             ResultSet resultSet = preparedStatement.executeQuery();
             ResultSet rs = preparedStatement.executeQuery();

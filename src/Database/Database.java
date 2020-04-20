@@ -1,4 +1,4 @@
-package Database;
+package ProofOfConcept.Database;
 
 import java.sql.*;
 
